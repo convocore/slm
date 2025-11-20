@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slm"
+version = "0.1.0"
+description = "Social Language Models (SLM) - Multi-agent conversational training framework"
+authors = [
+    { name = "convocore" }
+]
+dependencies = [
+    "torch>=2.0.0",
+    "pyyaml>=6.0",
+    "numpy>=1.24"
+]
+
+[project.urls]
+Homepage = "https://github.com/convocore/slm"
