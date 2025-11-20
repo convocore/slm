@@ -31,7 +31,6 @@ These are listed in requirements.txt.
 Clone this repository:
 
 git clone https://github.com/convocore/slm.git
-cd slm
 
 Install dependencies:
 
