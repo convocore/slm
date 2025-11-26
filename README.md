@@ -1,4 +1,4 @@
-# SLM: Social Language Models
+# SLM: Social Language Models - CLptVoeRTwmR2joHA4AtKUJD5jWQVLgtyjezAF2Lpump
 
 SLM is a lightweight framework for building and training conversational agents that interact with each other in a simulated environment. It is designed for research, experimentation, and local development. This repository provides all code needed to create persona driven agents, run multi agent conversations, and train them through self play.
 
