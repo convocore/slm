@@ -10,14 +10,19 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, 200, { ok: true });
     }
 
-    if (req.method === "GET" && req.url?.startsWith("/lessons")) {
+    if (req.url?.startsWith("/lessons")) {
+      if (req.method !== "GET") return sendJson(res, 405, { error: "use GET" });
       const url = new URL(req.url, `http://localhost:${port}`);
       const limit = Number(url.searchParams.get("limit") || 18);
       return sendJson(res, 200, { lessons: listLessons(limit) });
     }
 
-    if (req.method === "POST" && req.url === "/submitLesson") {
+    if (req.url === "/submitLesson") {
+      if (req.method !== "POST") return sendJson(res, 405, { error: "use POST" });
       const body = await readJson(req);
+      if (!clamp(body?.title, 140) || !clamp(body?.body, 2600)) {
+        return sendJson(res, 400, { error: "missing title/body" });
+      }
       const lesson = insertLesson(body);
       return sendJson(res, 200, { ok: true, id: lesson.id });
     }
