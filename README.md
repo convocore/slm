@@ -114,6 +114,34 @@ npm run swarms-test
 
 ---
 
+## Python Requirements (Swarms Integration)
+
+The interpreter can route complex or multi-step tasks into a Python-based Swarms workflow.
+To enable this, install the dependencies listed in `requirements.txt`:
+
+```
+pip install -r requirements.txt
+```
+
+If using a virtual environment:
+
+```
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+These Python modules are required:
+
+- integrations/swarms/run_swarms.py
+- integrations/swarms/swarmRouter.py
+- integrations/swarms/swarms_agents.py
+- integrations/swarms/**init**.py
+
+Node will automatically call these modules when Swarms is needed.
+
+---
+
 ## Required Environment Variables
 
 A .env file should be created based on .env.example. You must provide:
