@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/demo.js"
+    "start": "node dist/demo.js",
+    "swarms-test": "python ./src/integrations/swarms/run_swarms.py \"test message\" sequential \"[]\""
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.23.0",
