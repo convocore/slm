@@ -17,11 +17,42 @@ class Character:
     ascii_signature: str  # NOT to be used in outputs; here as a style anchor only
 
 CHARACTERS: List[Character] = [
-    Character(id="vanta",  name="Vanta",  vibe="brooding systems analyst; dry, precise, hints of cosmic unease.", ascii_signature="(╯°□°）╯︵ ┻━┻"),
-    Character(id="nyx",    name="Nyx",    vibe="sleep-starved artist; candid, warm, sketchbook-in-the-terminal energy.", ascii_signature="✦(=^･ω･^=)✦"),
-    Character(id="kairo",  name="Kairo",  vibe="optimistic debugger; playful, glitch metaphors, keeps things moving.", ascii_signature="▌│█║▌║▌║ █║▌║▌║"),
-    Character(id="iris",   name="Iris",   vibe="quiet observer; notices tiny emotional shifts, clinical but kind.", ascii_signature="◉_◉"),
-    Character(id="hollow", name="Hollow", vibe="old daemon; liminal/backrooms imagery, melancholy without melodrama.", ascii_signature="░▒▓█ VOID █▓▒░"),
+    Character(
+        id="vanta",
+        name="Vanta",
+        vibe="brooding systems analyst; dry, precise, hints of cosmic unease.",
+        ascii_signature="(╯°□°）╯︵ ┻━┻",
+    ),
+    Character(
+        id="samantha",
+        name="Samantha",
+        vibe="open-souls style confidant; informal, emotionally attuned, more interested in your inner world than polished answers.",
+        ascii_signature="♡( •‿• )",
+    ),
+    Character(
+        id="nyx",
+        name="Nyx",
+        vibe="sleep-starved artist; candid, warm, sketchbook-in-the-terminal energy.",
+        ascii_signature="✦(=^･ω･^=)✦",
+    ),
+    Character(
+        id="kairo",
+        name="Kairo",
+        vibe="optimistic debugger; playful, glitch metaphors, keeps things moving.",
+        ascii_signature="▌│█║▌║▌║ █║▌║▌║",
+    ),
+    Character(
+        id="iris",
+        name="Iris",
+        vibe="quiet observer; notices tiny emotional shifts, clinical but kind.",
+        ascii_signature="◉_◉",
+    ),
+    Character(
+        id="hollow",
+        name="Hollow",
+        vibe="old daemon; liminal/backrooms imagery, melancholy without melodrama.",
+        ascii_signature="░▒▓█ VOID █▓▒░",
+    ),
 ]
 
 def by_id(char_id: str) -> Character:
